@@ -1,0 +1,10 @@
+.reviewList{
+    width:auto;
+    max-width:80%;
+
+    height:auto;
+    min-height: fit-content;
+    border: red solid 2px;
+    padding: 0;
+
+}

@@ -1,0 +1,25 @@
+.button{
+    box-sizing: content-box;
+    padding: 0.3rem 0.3rem 0.3rem;
+    font: 2rem;
+    width:fit-content;
+    height: 2rem;
+    background: white;
+    color: #FF5655;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #FF5655;
+}
+
+.button:hover,
+.button:active {
+	background: #FF5655;
+	color: white;
+}
+
+
+.button--big {
+    width:12rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
