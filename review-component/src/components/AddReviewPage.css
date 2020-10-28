@@ -1,0 +1,56 @@
+.reviewPageContainer{
+    width:80%;
+    height:auto;
+    min-height: fit-content;
+    margin: 0 5em;
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    border: blue solid 2px;
+
+}
+
+.reviewForm{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+
+}
+.reviewTitleBox{
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.reviewContentBox{
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.input{
+    width: 50%;
+    margin: 1rem 0;
+
+
+}
+.input_content{
+    height: 8rem;
+}
+
+
+.reviewProfileBox{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+
+}
+
+.addReviewButton{
+    margin: 3rem;
+}

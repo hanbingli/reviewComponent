@@ -3,10 +3,9 @@ import { HorizontalBar } from 'react-chartjs-2';
 
 import './RatingCard.css';
 
-import StarRating from './StarRating';
 import ReactStars from "react-rating-stars-component";
 import Button from '../UIElements/Button';
-import { FaRegCalendarMinus } from 'react-icons/fa';
+
 
 
 
@@ -82,6 +81,7 @@ const RatingCard = props => {
                 <Button className='reviewCard__addReviewButton' size='big' >Write a review</Button>
             </div>
         </div>
+
         <div className='reviewCard__ratingBox'>
             <div className='reviewCard__ratingBox__left'>
                 <div className='reviewCard__ratingBox__average'>4.8</div>
