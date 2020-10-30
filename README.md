@@ -9,4 +9,5 @@ To get started you can simply clone the repo and install the dependencies in the
 | Steps   | with [NPM](https://www.npmjs.com/) |
 | ------- | ---------------------------------- |
 | Install | `npm install`                      |
-| Run     | `npm start`                      |
+| Enterfolder | `cd backend`                   |
+| Run     | `npm run dev`                      |
