@@ -1,0 +1,130 @@
+.reviewItem__outerBox{
+    width:100%;
+    height:auto;
+    min-height: fit-content;
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: lightgray solid 0.5px;
+    padding: 0.5rem 0;
+   
+}
+
+.reviewItem_headerBox{
+    width:100%;
+
+    display: flex;
+    justify-content: row;
+    height:2rem;
+    /* border: blue solid 1px; */
+}
+
+.reviewCard__starBox{
+    width: 20%;
+    /* border: pink solid 1px; */
+}
+
+.reviewItem__titleBox{
+    width: 50%;
+    padding-bottom:0.5rem;
+    margin:0;
+    text-align: left;
+    /* border: pink solid 1px; */
+}
+.reviewItem__title{
+    padding:0;
+    margin:0;
+    color: #FF5655;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+.reviewItem_infoBox{
+    display: flex;
+    justify-content: row;
+
+
+    color: gray;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    /* border: blue solid 1px; */
+
+}
+.reviewItem_info{
+    padding:0;
+    margin:0;
+}
+
+.reviewItem__commentBox{
+    width:95%;
+    /* border: lightgray solid 0.5px; */
+    text-align: left;
+}
+
+.reviewItem__comment{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.reviewItem__footerBox{
+    box-sizing: border-box;
+    width:100%;
+    height: 2rem;
+    padding:0.3rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;  
+    /* border: blue solid 2px; */
+}
+
+/* .thumbsBox{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    border: blue solid 2px;
+
+} */
+.likeCount{
+    box-sizing: border-box;
+    /* border:#FF5655 solid 0.5px; */
+    width: 3%;
+
+}
+
+
+.icon_thumbs{
+    margin-right: 0;
+    margin:0;   
+    /* border:#FF5655 solid 0.5px; */
+    width: 5%;
+    cursor: pointer;
+}
+
+
+.icon_thumbs:hover{
+    color:#FF5655 ;
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+
+}
+.thumbsUp_false{
+    color: grey;
+}
+.thumbsDown_false{
+    color: grey;
+}
+.thumbsUp_true{
+
+    color:#FF5655;
+}
+
+.thumbsDown_true{
+    color:#FF5655;
+
+}
+
+

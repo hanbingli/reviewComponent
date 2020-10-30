@@ -13,8 +13,6 @@ const ReviewListItem = (props) => {
 
 
 
-
-
 return(
     <li className='reviewItem__outerBox' >
 
@@ -42,8 +40,8 @@ return(
         </div>
 
         <div className='reviewItem__footerBox'>
-            <FaThumbsUp />
-            <FaThumbsDown />
+            <FaThumbsUp  className='icon_thumbs' />
+            <FaThumbsDown className='icon_thumbs' />
               
         </div>
 

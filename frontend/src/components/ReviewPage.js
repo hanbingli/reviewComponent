@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState,  useEffect }  from 'react';
 import RatingCard from './ratingCard/RatingCard';
-import ReviewList from './reviewList/ReviewList'
+import ReviewList from './reviewList/ReviewList';
+import { useHttpClient } from './hooks/http-hook';
 
-const ReviewPage = () =>{
+const ReviewPage = (props) =>{
+    const articleId = props.articleId;
+    const { isLoading, error, sendRequest, clearError } = useHttpClient();
+
+    const [loadedReviews, setLoadedReviews] = useState([]);
+
+    useEffect(() => {
+    
+        const fetchReviews = async () => {
+            try {
+                    const responseData = await sendRequest(
+                      `${process.env.REACT_APP_ASSET_URL}/api/reviews/${articleId}`
+                    );
+    
+                    setLoadedReviews(responseData.reviews)
+                    
+                  } catch (err) {}
+          };
+          console.log(loadedReviews)
+        fetchReviews();
+      }, [sendRequest]);
+
     const dummy_rating_array =  [12, 19, 3, 5, 1];
 
     const dummy_reviews = [
@@ -31,10 +53,13 @@ const ReviewPage = () =>{
     ]
 
 
+
+
+
     return(
         <div className ="container">
-            <RatingCard average= {4.8} array={dummy_rating_array} />
-            <ReviewList items={dummy_reviews} />
+            <RatingCard average= {4.8} array={dummy_rating_array} articleId={articleId} />
+            <ReviewList items={loadedReviews} />
 
         </div>
     )

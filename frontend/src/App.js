@@ -15,6 +15,8 @@ import AddReviewPage from './components/AddReviewPage';
 
 
 function App() {
+  const articleId ='5f9af4826d4d6b0fc2ab32f7';
+
   return (
     <Router>
     <div className="App">
@@ -22,12 +24,12 @@ function App() {
         <img src={bannerPic} className='bannerPic'/>
       </header>
 
-      <Route path="/" exact>
-        <ReviewPage />
+      <Route path='/'exact>
+        <ReviewPage articleId={articleId} />
       </Route>
 
-      <Route path="/review" exact>
-        <AddReviewPage />
+      <Route path="/addReview" exact>
+        <AddReviewPage articleId={articleId}/>
       </Route>
     </div>
     </Router>

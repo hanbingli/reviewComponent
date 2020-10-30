@@ -21,10 +21,9 @@ const ReviewList = (props) => {
         <ul className="reviewList">
           {items.map((i) => (
             <ReviewListItem
-            stars={i.stars}
-              userId={i.userId}
-              id={i.id}
-              userName={i.userName}
+            stars={i.rating}
+              id={i._id}
+              userName={i.creator}
               title={i.title}
               content={i.content}
               date={i.date}

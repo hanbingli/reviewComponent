@@ -51,7 +51,7 @@ const AddReviewPage = () =>{
                 {errors.name && errors.name.type === "required" && <span>This is required</span>}
                 {errors.name && errors.name.type === "maxLength" && <span>Max length exceeded</span> }
 
-                <Button type="submit" >
+                <Button type="submit" className='addReviewButton' >
                     ADD REVIEW
                 </Button>
             </form>

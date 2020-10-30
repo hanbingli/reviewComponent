@@ -8,9 +8,6 @@ import Button from '../UIElements/Button';
 
 
 
-
-
-
 const RatingCard = props => {
 
     const [currentRating, setCurrentRating] = useState()

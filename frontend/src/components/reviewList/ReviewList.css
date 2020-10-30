@@ -4,7 +4,9 @@
 
     height:auto;
     min-height: fit-content;
-    border: red solid 2px;
+    border-top: lightgray solid 0.5px;
     padding: 0;
+
+
 
 }
