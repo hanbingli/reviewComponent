@@ -84,7 +84,7 @@ const AddReviewPage = (props) => {
 
                         <div className='reviewContentBox'>
                             <label htmlFor="content">How do you find the article?</label>
-                            <input type="text" id="content" name="content" className='input input_content' ref={register({ required: true })} />
+                            <textarea type="text" id="content" name="content" className='input input_content' ref={register({ required: true })} />
                         </div>
                     </div>
 

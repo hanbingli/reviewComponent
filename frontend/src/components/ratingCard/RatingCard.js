@@ -18,13 +18,7 @@ const RatingCard = props => {
 
     const [averageRating, setAverageRating] = useState(null);
     const [ratings, setRatings] = useState([]);
-
-    const [ratings5, setRatings5] = useState(0);
-    const [ratings4, setRatings4] = useState(0);
-    const [ratings3, setRatings3] = useState(0);
-    const [ratings2, setRatings2] = useState(0);
-    const [ratings1, setRatings1] = useState(0);
-
+    const [ratingsArray, setRatingsArray] = useState([]);
 
     const ratingColumns = [
         {_id: 5, count:0},
@@ -33,6 +27,9 @@ const RatingCard = props => {
         {_id: 2, count:0},
         {_id: 1, count:0}
     ];
+
+    let columns
+    let columnsArray
 
 
 
@@ -56,36 +53,36 @@ const RatingCard = props => {
                     setAverageRating(responseData.average)
     
                     console.log(responseData.ratings)
-                    setRatings5(responseData.ratings.find(r=> r._id === 5).count)
-                    setRatings4(responseData.ratings.find(r=> r._id === 4).count)
-                    setRatings3(responseData.ratings.find(r=> r._id === 3).count)
-                    setRatings2(responseData.ratings.find(r=> r._id === 2).count)
-                    setRatings1(responseData.ratings.find(r=> r._id === 1).count)
-                    
-                   
-                    // ratingColumns[ratingColumns.findIndex(r=> r._id === )]
+                    columns = await ratingColumns.map(obj=> responseData.ratings.find(o=> o._id === obj._id) || obj)
+                    console.log(columns)
+                    columnsArray = columns.map(o=>o.count)
+                    console.log(columnsArray)
+                    // setRatings(columns)
+                    setRatingsArray(columnsArray)
+
                     
                   } catch (err) {}
           };
-          setRatings([ratings5, ratings4, ratings3, ratings2, ratings1])
+
           console.log(averageRating)
-          console.log(ratings)
 
         fetchRatings();
       }, [sendRequest]);
 
 
     const data = {
-        labels: ratings,
+        labels:ratingsArray,
+        // columnsArray,
         datasets: [
           {
-            data:props.array,
+            data: ratingsArray,
             backgroundColor: '#FFD700',
             borderColor: '#FFD700',
             borderWidth: 0,
           },
         ],
       }
+      console.log(data)
       
 
       const options = {
@@ -214,6 +211,7 @@ const RatingCard = props => {
                          </div>
                          <div className='ratingColumns'>
                              <HorizontalBar data={data} options={options} width="90%" height="23rem" />
+
                          </div>
                              
                      </div>
