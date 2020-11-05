@@ -37,8 +37,6 @@ const AddReviewPage = (props) => {
     const [addedPros, setAddedPros] = useState([]);
     const [addedCons, setAddedCons] = useState([]);
 
-    const stancePro = true;
-    const stanceCon = false;
 
 
     const history = useHistory();
@@ -200,7 +198,7 @@ const AddReviewPage = (props) => {
                                     className='proList' 
                                     addedPros={addedPros} 
                                     addedCons={addedCons}
-                                    stance ={stancePro} />
+                                    stance ={true} />
                                 )
 
                                    
@@ -219,7 +217,7 @@ const AddReviewPage = (props) => {
                                     className='conList' 
                                     addedPros={addedPros} 
                                     addedCons={addedCons}
-                                    stance ={stanceCon}  />
+                                    stance ={false}  />
                                 )
 
                                    

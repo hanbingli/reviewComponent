@@ -141,7 +141,7 @@
     flex-direction: column;
 }
 
-.proConItem{
+.proConItemfalse{
     background: transparent;
     cursor: pointer;
     border: 0.1px;
@@ -150,8 +150,26 @@
     border-radius: 5px;
     
 }
-.proConItem:hover,
-.proConItem:active{
+.proConItemfalse:hover,
+.proConItemfalse:active{
+    transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
+
+
+.proConItemtrue{
+    background: transparent;
+    cursor: pointer;
+    border: 0.1px;
+    background-color: rgba(247, 168, 168, 0.9);
+    border:red solid 2px;
+    margin-bottom: 0.2rem;
+    border-radius: 5px;
+    
+}
+
+.proConItemtrue:hover,
+.proConItemtrue:active{
     transition: all .2s ease-in-out;
   transform: scale(1.1);
 }
