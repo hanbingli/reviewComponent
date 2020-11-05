@@ -130,6 +130,14 @@ return(
         <div className='reviewItem__commentBox'>
               <p className='reviewItem__comment'>  {props.content}</p>
         </div>
+        {/* {
+            props.img && ( */}
+            <div className='reviewItem__commentImgBox'>
+            <img className='reviewItem__img' src={props.img} /> 
+      </div>
+      {/* )
+        } */}
+        
 
         <div className='reviewItem__footerBox'>
 

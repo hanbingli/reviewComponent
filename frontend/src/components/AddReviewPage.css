@@ -32,6 +32,13 @@
     flex-direction: column;
     text-align: left;
 }
+
+.reviewPicBox{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
 .input{
     width: 50%;
     margin: 1rem 0;
@@ -55,3 +62,25 @@
 .addReviewButton{
     margin: 1rem 0;
 }
+
+.review-img{
+    max-height: 6rem;
+    max-width: 8rem;
+}
+
+.reviewShortcutBox{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.proConBox{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .proConItem:{
+
+} */

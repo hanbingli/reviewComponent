@@ -93,7 +93,7 @@ const addReview = async (req, res, next) => {
 
     const articleId = req.params.artId;
 
-    const { title, creator, creatorEmail, date, content, rating } = req.body;
+    const { title, creator, creatorEmail, date, content, rating, img, pros, cons} = req.body;
 
     const createdReview = new Review({
         title,
@@ -102,7 +102,10 @@ const addReview = async (req, res, next) => {
         date,
         content,
         article: articleId,
-        rating
+        rating,
+        img, 
+        pros,
+        cons
     });
 
     let targetArticle;

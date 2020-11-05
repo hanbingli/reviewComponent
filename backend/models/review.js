@@ -11,7 +11,10 @@ const reviewSchema = new Schema({
     creatorEmail: { type: String },
     article: { type: mongoose.Types.ObjectId, required: true,  ref: 'Article' },
     likes: { type: Number, default:0 },
-    dislikes: { type: Number , default:0 }
+    dislikes: { type: Number , default:0 }, 
+    img: {type: String }, 
+    pros: [ { type: String }],
+    cons: [ { type: String }]
     
 });
 

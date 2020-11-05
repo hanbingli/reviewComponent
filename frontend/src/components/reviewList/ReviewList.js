@@ -29,6 +29,7 @@ const ReviewList = (props) => {
               date={i.date}
               likes={i.likes}
               dislikes={i.dislikes}
+              img={i.img}
              
             />
           ))}

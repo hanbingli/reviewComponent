@@ -126,5 +126,13 @@
     color:#FF5655;
 
 }
+.reviewItem__commentImgBox{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.3rem;
+}
 
-
+.reviewItem__img{
+    max-height: 6rem;
+    max-width: 8rem;
+}

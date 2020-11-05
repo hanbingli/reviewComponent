@@ -33,9 +33,6 @@ const RatingCard = props => {
 
 
 
-  
-
-
     const addReviewHandler = (event) =>{
         event.preventDefault();
         history.push('/addReview');
@@ -49,14 +46,14 @@ const RatingCard = props => {
                     const responseData = await sendRequest(
                       `${process.env.REACT_APP_ASSET_URL}/api/reviews/${articleId}/rating`
                     );
-                    console.log(responseData)
+                    // console.log(responseData)
                     setAverageRating(responseData.average)
     
-                    console.log(responseData.ratings)
+                    // console.log(responseData.ratings)
                     columns = await ratingColumns.map(obj=> responseData.ratings.find(o=> o._id === obj._id) || obj)
-                    console.log(columns)
+                    // console.log(columns)
                     columnsArray = columns.map(o=>o.count)
-                    console.log(columnsArray)
+                    // console.log(columnsArray)
                     // setRatings(columns)
                     setRatingsArray(columnsArray)
 
@@ -64,7 +61,7 @@ const RatingCard = props => {
                   } catch (err) {}
           };
 
-          console.log(averageRating)
+        //   console.log(averageRating)
 
         fetchRatings();
       }, [sendRequest]);
@@ -72,7 +69,6 @@ const RatingCard = props => {
 
     const data = {
         labels:ratingsArray,
-        // columnsArray,
         datasets: [
           {
             data: ratingsArray,
@@ -82,7 +78,7 @@ const RatingCard = props => {
           },
         ],
       }
-      console.log(data)
+    //   console.log(data)
       
 
       const options = {
