@@ -37,6 +37,9 @@ const AddReviewPage = (props) => {
     const [addedPros, setAddedPros] = useState([]);
     const [addedCons, setAddedCons] = useState([]);
 
+    const stancePro = true;
+    const stanceCon = false;
+
 
     const history = useHistory();
 
@@ -54,13 +57,16 @@ const AddReviewPage = (props) => {
     }
 
     const addProHandler=(text) =>{
-        
-        addedPros.push(text)
+
+        setAddedPros(text);
+        console.log(addedPros)
 
 
     }
     const addConHandler=(text) =>{
-        addedCons.push(text)
+        setAddedCons(text);
+        console.log(addedCons)
+
 
 
     }
@@ -130,8 +136,8 @@ const AddReviewPage = (props) => {
                         creatorEmail: data.creatorEmail,
                         rating: rating,
                         img: reviewImg, 
-                        // pros: addedPros,
-                        // cons: addedCons
+                        pros: addedPros,
+                        cons: addedCons
 
                     })
                 }
@@ -182,26 +188,38 @@ const AddReviewPage = (props) => {
                             <textarea type="text" id="content" name="content" className='input input_content' ref={register({ required: true })} />
                         </div>
                         <div className='reviewShortcutBox'>
-                            <div className='proConBox'>
-                                <button className='plusButton' onClick={plusOnclickHandler} >
-                                    <FaPlus />
+                            <div className='proConBox plusBox'>
+                                <button className='plusButton proConbuttons' onClick={plusOnclickHandler} >
+                                    <FaPlus className='proConIcons' />
                                 </button>
 
                                 {showPros && (
-                                    <ProConList items={props.pros}  onClick={addProHandler} />
+                                    <ProConList items={props.pros}  
+                                    onPro={addProHandler} 
+                                    onCon={addConHandler} 
+                                    className='proList' 
+                                    addedPros={addedPros} 
+                                    addedCons={addedCons}
+                                    stance ={stancePro} />
                                 )
 
                                    
                                 }
                             </div>
 
-                            <div className='proConBox'>
-                                <button  className='minusButton' onClick={minusOnclickHandler} >
-                                    <FaMinus />
+                            <div className='proConBox minusBox'>
+                                <button  className='minusButton proConbuttons' onClick={minusOnclickHandler} >
+                                    <FaMinus className='proConIcons' />
                                 </button>
 
                                 {showCons && (
-                                    <ProConList items={props.pros}  onClick={addConHandler} />
+                                    <ProConList items={props.cons}  
+                                    onPro={addProHandler} 
+                                    onCon={addConHandler} 
+                                    className='conList' 
+                                    addedPros={addedPros} 
+                                    addedCons={addedCons}
+                                    stance ={stanceCon}  />
                                 )
 
                                    

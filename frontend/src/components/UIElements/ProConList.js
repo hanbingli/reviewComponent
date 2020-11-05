@@ -9,11 +9,16 @@ const ProConList =(props) =>{
 
     return(
         <React.Fragment>
-        <ul className="proConList">
+        <ul className={props.className}>
           {items.map((i) => (
             <ProConListItem
             text={i}
-            onClick={props.onClick}
+            onPro={props.onPro} 
+            onCon={props.onCon} 
+            key={items.indexOf(i)}
+            addedPros={props.addedPros} 
+            addedCons={props.addedCons}
+            stance = {props.stance}
             />
           ))}
         </ul>

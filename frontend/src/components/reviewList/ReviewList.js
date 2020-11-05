@@ -30,6 +30,8 @@ const ReviewList = (props) => {
               likes={i.likes}
               dislikes={i.dislikes}
               img={i.img}
+              pros={i.pros}
+              cons={i.cons}
              
             />
           ))}

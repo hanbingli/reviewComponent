@@ -136,3 +136,43 @@
     max-height: 6rem;
     max-width: 8rem;
 }
+
+.reviewItem_proConBox{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    /* border: solid blue 1px; */
+
+
+}
+.reviewItem_proList{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* border: solid blue 1px; */
+
+}
+.reviewItem_conList{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    
+}
+
+
+.proConIcons{
+    color: #FF5655;
+    border:none;
+    margin-right: 5px;
+}
+
+.reviewProConListItem{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /* border: solid blue 1px; */
+}

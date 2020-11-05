@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import ReactStars from "react-rating-stars-component";
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
 import moment from 'moment';
+import ReviewProConList from './ReviewProConList';
 
 import './ReviewListItem.css';
 
@@ -126,6 +127,14 @@ return(
         <div className='reviewItem_infoBox'>   
              <p className='reviewItem_info'> {props.userName} | {convertedDate}</p>  
         </div>
+
+        <div className='reviewItem_proConBox'>   
+         <ReviewProConList stance={true}  items={props.pros} className='reviewItem_proList'/>
+         <ReviewProConList stance={false}  items={props.cons} className='reviewItem_conList'/>
+           
+        </div>
+
+
 
         <div className='reviewItem__commentBox'>
               <p className='reviewItem__comment'>  {props.content}</p>
