@@ -56,6 +56,8 @@ To get started you can simply clone the repo and install the dependencies in the
 <img src = "https://tva1.sinaimg.cn/large/0081Kckwgy1gkf5u90gqdj31as0osq8e.jpg" />
 
 <h2>Structure tree</h2>
+
+```
 .
 ├── client
 │   └── src
@@ -103,3 +105,4 @@ To get started you can simply clone the repo and install the dependencies in the
         └── reviews-routes.js
 
 
+```
