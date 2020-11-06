@@ -55,3 +55,51 @@ To get started you can simply clone the repo and install the dependencies in the
 <img src = "https://tva1.sinaimg.cn/large/0081Kckwgy1gkf5u9ktq9j31e40tun0o.jpg" />
 <img src = "https://tva1.sinaimg.cn/large/0081Kckwgy1gkf5u90gqdj31as0osq8e.jpg" />
 
+<h2>Structure tree</h2>
+.
+├── client
+│   └── src
+│       ├── App.css
+│       ├── App.js
+│       ├── App.test.js
+│       ├── banner.jpg
+│       ├── components
+│       │   ├── AddReviewPage.css
+│       │   ├── AddReviewPage.js
+│       │   ├── ReviewPage.js
+│       │   ├── UIElements
+│       │   │   ├── Backdrop.css
+│       │   │   ├── Backdrop.js
+│       │   │   ├── Button.css
+│       │   │   ├── Button.js
+│       │   │   ├── ImgModal.css
+│       │   │   ├── ImgModal.js
+│       │   │   ├── ProConList.js
+│       │   │   ├── ProConListItem.js
+│       │   │   └── StarRating.js
+│       │   ├── hooks
+│       │   │   └── http-hook.js
+│       │   ├── ratingCard
+│       │   │   ├── RatingCard.css
+│       │   │   └── RatingCard.js
+│       │   └── reviewList
+│       │       ├── ReviewList.css
+│       │       ├── ReviewList.js
+│       │       ├── ReviewListItem.css
+│       │       ├── ReviewListItem.js
+│       │       ├── ReviewProConList.js
+│       │       └── ReviewProConListItem.js
+│       ├── index.css
+│       └── index.js
+└── server
+    ├── app.js
+    ├── controllers
+    │   └── reviews-controllers.js
+    ├── models
+    │   ├── article.js
+    │   ├── http-error.js
+    │   └── review.js
+    └── routes
+        └── reviews-routes.js
+
+
