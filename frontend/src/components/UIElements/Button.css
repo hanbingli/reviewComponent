@@ -9,6 +9,10 @@
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid #FF5655;
+    box-shadow: rgba(247, 168, 168, 0.24) 0px 3px 8px;
+/* 
+    box-shadow: rgba(247, 168, 168, 0.25) 0px 6px 12px -2px, rgba(247, 168, 168, 0.3) 0px 3px 7px -3px; */
+
 }
 
 .button:hover,

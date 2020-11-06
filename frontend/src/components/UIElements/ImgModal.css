@@ -1,0 +1,28 @@
+.imgModal__container{
+    position: fixed;
+    margin-top: 2rem;
+    margin-left: 20%;
+    width: fit-content;
+    max-width: 60%;
+    height: fit-content;
+    max-height: 28rem;
+    border-radius: 1rem;
+    border: rgba(128,128,128, 0.1) 0.03rem solid;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding:1rem;
+    z-index: 50;
+
+    box-shadow: rgba(247, 168, 168, 0.25) 0px 6px 12px -2px, rgba(107, 79, 79, 0.3) 0px 3px 7px -3px;
+
+
+}
+
+
+.zoomedReviewPic{
+    max-width: 95%;
+    max-height:27rem;
+}

@@ -4,6 +4,8 @@ import ReactStars from "react-rating-stars-component";
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
 import moment from 'moment';
 import ReviewProConList from './ReviewProConList';
+import ImgModal from '../UIElements/ImgModal';
+import Backdrop from '../UIElements/Backdrop';
 
 import './ReviewListItem.css';
 
@@ -16,12 +18,21 @@ const ReviewListItem = (props) => {
     const history = useHistory();
     const [likes, setLikes] = useState(props.likes);
     const [dislikes, setDislikes] = useState(props.dislikes);
+    const [zoomImg, setZoomImg] = useState(false);
 
     const [like, setLike] = useState(false);
     const [dislike, setDislike] = useState(false);
 
     const convertedDate = moment(props.date).format('YYYY-MM-DD');
     const reviewId = props.id;
+
+    const zoomImgHandler =()=>{
+        setZoomImg(true)
+    }
+
+    const cancelZoomImgHandler =()=>{
+        setZoomImg(false)
+    }
     
     const likeReview = async () => {
         try {
@@ -139,13 +150,28 @@ return(
         <div className='reviewItem__commentBox'>
               <p className='reviewItem__comment'>  {props.content}</p>
         </div>
-        {/* {
-            props.img && ( */}
+
             <div className='reviewItem__commentImgBox'>
-            <img className='reviewItem__img' src={props.img} /> 
-      </div>
-      {/* )
-        } */}
+            <button className='zoomImgButton' onClick={zoomImgHandler}>
+                <img className='reviewItem__img' src={props.img} /> 
+            </button>
+            {
+                zoomImg && (
+                   <Backdrop onClick={cancelZoomImgHandler} src={props.img} />
+                   
+
+                )
+            }
+            {
+                zoomImg && (
+                   <ImgModal src={props.img} />
+
+                )
+            }
+           
+           
+             </div>
+
         
 
         <div className='reviewItem__footerBox'>

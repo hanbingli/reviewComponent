@@ -1,12 +1,17 @@
 .reviewPageContainer{
-    width:80%;
+    width:60%;
     height:auto;
     min-height: fit-content;
     margin: 0 5em;
+    padding-left: 2rem;
 
     display: flex;
     flex-direction: column;
     text-align: left;
+
+
+    box-shadow: rgba(247, 168, 168, 0.4) 0px 6px 12px -5px, rgba(107, 79, 79, 0.5) 0px 3px 7px -5px;
+
 
     /* border: blue solid 2px; */
 
@@ -37,12 +42,13 @@
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-top: 2rem;
 
 }
 .input{
-    width: 50%;
+    width: 90%;
     margin: 1rem 0;
-    border: #FF5655 0.5px solid;
+    border: #FF5655 0.5px dashed;
 
 
 }
@@ -63,13 +69,25 @@
     margin: 1rem 0;
 }
 
+
+.proConButtonBox{
+    display: flex;
+    flex-direction: row;
+}
+.proConHint{
+    padding-top:10px;
+    font-size: smaller;
+    color:#FF5655 ;
+}
+
+
 .review-img{
     max-height: 6rem;
     max-width: 8rem;
 }
 
 .reviewShortcutBox{
-    width: 50%;
+    width: 90%;
     display: flex;
     flex-direction: row;
   
@@ -80,7 +98,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
     justify-content: left;
     align-content: flex-start;
 
@@ -94,12 +112,12 @@
     display: flex;
     flex-direction: column;
     justify-content: right;
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
     /* border: solid 1px red */
 }
 .minusButton{
     width:100%;
-    border: solid 1px red
+    /* border: solid 1px red */
 }
 
 .proConbuttons{
@@ -107,14 +125,17 @@
     border: none;
     color: #FF5655;
     width: 3rem;
-    border: solid 1px red
+    /* border: solid 1px red */
 
 }
+
 
 .proConIcons{
 
     border: solid 1px red;
     cursor: pointer;
+    padding: 5px;
+    margin: 5px
     
 }
 .proConIcons:hover,

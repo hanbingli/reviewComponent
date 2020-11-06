@@ -38,6 +38,8 @@ const ProConListItem =(props) =>{
             addedCons.push(text);
             console.log(addedCons)
             props.onCon(addedCons)
+            setClicked(true)
+
 
     
 

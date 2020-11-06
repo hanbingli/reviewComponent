@@ -187,9 +187,12 @@ const AddReviewPage = (props) => {
                         </div>
                         <div className='reviewShortcutBox'>
                             <div className='proConBox plusBox'>
+                            <div className='proConButtonBox'>
                                 <button className='plusButton proConbuttons' onClick={plusOnclickHandler} >
                                     <FaPlus className='proConIcons' />
                                 </button>
+                            <div className='proConHint'>Click for shortcut review</div>
+                                </div>
 
                                 {showPros && (
                                     <ProConList items={props.pros}  
@@ -206,9 +209,12 @@ const AddReviewPage = (props) => {
                             </div>
 
                             <div className='proConBox minusBox'>
+                                <div className='proConButtonBox'>
                                 <button  className='minusButton proConbuttons' onClick={minusOnclickHandler} >
                                     <FaMinus className='proConIcons' />
                                 </button>
+                                <div className='proConHint'>Click for shortcut review</div>
+                                </div>
 
                                 {showCons && (
                                     <ProConList items={props.cons}  

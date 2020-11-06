@@ -13,16 +13,17 @@ const ReviewProConListItem = (props) => {
         <React.Fragment>
             {stance && (
                   <li className="reviewProConListItem">
-                      <FaPlus className="proConIcons" />
-                    {props.text}
+                      <FaPlus className="reviewProConIcons" />
+                    <div className ="proConText" >{props.text}</div>
                  </li>
                 
             )}
             {!stance && (
                   <li className="reviewProConListItem">
-                      <FaMinus className="proConIcons" />
-                    {props.text}
+                      <FaMinus className="reviewProConIcons" />
+                      <div className ="proConText">{props.text}</div>
                  </li>
+            
                 
             )}
 
