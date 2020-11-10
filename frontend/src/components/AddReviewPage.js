@@ -13,17 +13,10 @@ import ProConList from './UIElements/ProConList'
 
 import './AddReviewPage.css';
 
-// const cloudinary = require('cloudinary').v2;
-
-
 
 const url = `https://api.Cloudinary.com/v1_1/dkg3jv28n/image/upload`
 
-// cloudinary.config({
-//     cloud_name: process.env.REACT_APP_CLOUDINARY_NAME,
-//     api_key: process.env.REACT_APP_CLOUDINARY_API_KEY,
-//     api_secret: process.env.REACT_APP_CLOUDINARY_API_SECRET,
-//   })
+
 
 const AddReviewPage = (props) => {
     const articleId = props.articleId;
@@ -61,6 +54,15 @@ const AddReviewPage = (props) => {
 
 
     }
+
+    const cancelProHandler=(text) =>{
+
+        setAddedPros( (prevPros) =>text);
+        console.log(addedPros)
+
+
+    }
+
     const addConHandler=(text) =>{
         setAddedCons(text);
         console.log(addedCons)
@@ -197,6 +199,7 @@ const AddReviewPage = (props) => {
                                 {showPros && (
                                     <ProConList items={props.pros}  
                                     onPro={addProHandler} 
+                                    cancelPro ={cancelProHandler}
                                     onCon={addConHandler} 
                                     className='proList' 
                                     addedPros={addedPros} 
@@ -239,9 +242,8 @@ const AddReviewPage = (props) => {
                             id="reviewPic" 
                             name="reviewPic" 
                             className='input input_reviewPic' 
-                            // ref={register}
                             onChange={imageUpload}
-                            // multiple
+
                            />
                            {
                                loading? <p>Loading...</p>:<img className='review-img' src = {reviewImg} />
