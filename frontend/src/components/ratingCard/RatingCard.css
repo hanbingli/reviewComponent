@@ -2,7 +2,7 @@
     width:80%;
     height:auto;
     min-height: fit-content;
-    margin-top: 1rem;
+    margin-top: 4rem;
     padding:1rem 1rem;
     /* border-top: lightgray solid 0.5px;
     border-bottom: lightgray solid 0.5px; */
@@ -67,6 +67,7 @@
     width:100%;
     font-size: 3em;
     text-align: left;
+    margin-bottom: 0.4rem;
 }
 
 .reviewCard__ratingBox__starsArray{
@@ -76,7 +77,14 @@
 
 }
 
+.ratingStars{
+    margin:0;
+    padding:0;
+  
+}
+
 .starsArray{
+    margin-top: 0rem;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -94,16 +102,22 @@
 
 }
 
-.ratingStars{
-    width:100%;
+.star{
+    width:90%;
+    height: 70%;
+    padding:0.5rem;
+    margin:0.5rem;
     /* border: green solid 1px; */
 
 }
 
 .ratingColumns{
-    width:100%;
-    height: 8rem;
-    /* border: green solid 1px; */
+
+    margin-top: 0.6rem;
+    max-width:90%;
+    height: 100%;
+    border: green solid 1px;
 
 
 }
+

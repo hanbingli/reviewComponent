@@ -75,6 +75,7 @@ const RatingCard = props => {
             backgroundColor: '#FFD700',
             borderColor: '#FFD700',
             borderWidth: 0,
+            maxBarThickness:12,
           },
         ],
       }
@@ -100,6 +101,7 @@ const RatingCard = props => {
         animation: {
             duration: 0 // general animation time
         },
+       
         hover: {
             animationDuration: 0 // duration of animations when hovering an item
         },
@@ -190,7 +192,6 @@ const RatingCard = props => {
                      </div>
                      <div className='reviewCard__ratingBox__right'>
                          <div className='ratingStars'>
-                             {/* <FaStar size = {100} /> */}
                              <ReactStars 
                                  className="star"
                                  value={averageRating}
@@ -206,7 +207,7 @@ const RatingCard = props => {
                                  />
                          </div>
                          <div className='ratingColumns'>
-                             <HorizontalBar data={data} options={options} width="90%" height="23rem" />
+                             <HorizontalBar data={data} options={options} width="90%" height="23%" />
 
                          </div>
                              
